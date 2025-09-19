@@ -44,11 +44,49 @@
         <h2>This is the guy that made<br /> me a sigma like <spam style="font-size: 35px;" id="SIGMA">HIM</spam>
         </h2>
         <br />
-        <button id="button1"><b>UNKNOWN</b></button>
+        <button id="button1" onclick="biographyjump()"><b>Biography</b></button>
         <button id="button2"><b>UNKNOWN</b></button>
         <div class="image">
             <img src="master.png" id="master" width="450" height="430">
         </div>
+    </div>
+    <div class="biography" id="biography">
+        <h1>The Master Behind the Champion</h1>
+        <p>No great warrior rises alone, and Idan Gilboa is no exception. Behind every strike, every perfected
+            technique, and every moment of calm in the storm of combat stands the guiding presence of his master: Ohad.
+
+            Ohad was not an ordinary coach. Whispers of his training methods spread like stories told around a
+            campfire—half unbelievable, half terrifying. Some said he once sparred against five men at once,
+            blindfolded, just to “stay sharp.” Others claimed he could break a watermelon with a single fingertip,
+            though he preferred to save such demonstrations for only the most serious of apprentices.
+
+            When Idan first stepped into the gym, Ohad did not see just a boy—he saw potential. A spark waiting to
+            ignite into a blaze. He took Idan under his wing, but not with kindness alone. Ohad`s lessons were ruthless,
+            designed to test the limits of body and mind:
+        <ul>
+            <li><strong>The Dawn Runs:</strong> 5 a.m. sprints up endless hills, with Ohad pacing alongside, sipping
+                coffee as if gravity itself didn`t apply to him.</li>
+            <li><strong>The Silent Rounds:</strong> sparring sessions where Idan was forbidden to speak, breathe too
+                loudly, or even wince, because, as Ohad declared, “Pain is a language. Learn it.”</li>
+            <li><strong>The Code of Balance:</strong> training that fused martial arts with puzzles and riddles, forcing
+                Idan to solve equations mid-workout, sharpening not only his fists but his mind.</li>
+        </ul>
+        Through these trials, Idan was forged. Ohad was not merely a master of fighting—he was a craftsman of champions.
+        And in Idan, he saw his magnum opus.
+
+        Even outside the gym, Ohad`s eccentric wisdom shaped Idan. He often delivered bizarre but unforgettable advice,
+        such as:
+        <ul>
+            <li>“A true fighter never underestimates his opponent… or his breakfast.”</li>
+            <li>“The cage is just a circle. But the circle has no corners. Think about that.”</li>
+            <li>“Physics is your ally. Programming is your weapon. Fighting is the space where they meet.”</li>
+        </ul>
+        It was under this mentorship that Idan Gilboa rose to dominate the Timtam Tournament, not once, not twice, but
+        three times, and to remain undefeated into 2025.
+
+        For every cheer of the crowd, for every victory, and for every defense of the title, Ohad`s influence can be
+        felt. If Idan is the sword, then Ohad is the blacksmith who forged it.
+        </p>
     </div>
     <div class="loader"></div>
     <script>
@@ -86,9 +124,11 @@
                 document.getElementById('myPopup').style.display = 'none';
             }
         }
+
+        function biographyjump() {
+            document.getElementById("biography").scrollIntoView({ behavior: "smooth" });
+        }
     </script>
 </body>
 
-
 </html>
-
