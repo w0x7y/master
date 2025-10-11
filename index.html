@@ -6,11 +6,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Master</title>
     <link rel="stylesheet" href="style-master.css">
-    <link rel="icon" href="pack.png">
+    <link rel="icon" href="icon.png">
 </head>
 
 <body>
+    <dive class="div-theme">
+        <form class="color-picker" action="">
+            <span id="Themes-text"><b>Themes</b></span>
+            <fieldset class="good-fieldset">
+                <legend class="Visually-hidden">Pick a color scheme</legend>
+
+                <label for="light-theme" class="Visually-hidden">Light</label>
+                <input type="radio" name="theme" id="light-theme" checked>
+
+                <label for="dark-theme" class="Visually-hidden">Dark</label>
+                <input type="radio" name="theme" id="dark-theme">
+
+                <label for="Neon-theme" class="Visually-hidden">Neon</label>
+                <input type="radio" name="theme" id="Neon-theme">
+            </fieldset>
+        </form>
+    </dive>
     <div class="off-screen-menu">
+        <fieldset class="bad-fieldset">
+            <h5 style="color: var(--text-color2)">Themes:</h5>
+            <legend class="Visually-hidden">Pick a color scheme</legend>
+
+            <label class="label-banana" for="light-theme"><img src="light.png" width="30" height="30"></label>
+            <input type="radio" name="theme" class="banana" id="light-theme">
+
+            <label class="label-banana" for="dark-theme"><img src="dark.png" width="30" height="30"></label>
+            <input type="radio" name="theme" class="banana" id="dark-theme">
+
+            <label class="label-banana" for="Neon-theme"><img src="neon.png" width="30" height="30"></label>
+            <input type="radio" name="theme" class="banana" id="Neon-theme">
+        </fieldset>
         <ul>
             <li>
                 <button id="LogIn-mini" onclick="openPopup()"><b>Log In</b></button>
@@ -38,7 +68,7 @@
     </nav>
     <div id="myPopup" class="popup-overlay">
         <div class="popup-content">
-            <h1><span style="color: rgba(0, 81, 255, 0.5)">LOG IN</span></h1>
+            <h1><span style="color: var(--text-color1)">LOG IN</span></h1>
             <p><input type="text" id="Name" placeholder="Name..."></p>
             <br />
             <p><input type="text" id="food" placeholder="Favorite food..."></p>
@@ -46,8 +76,9 @@
             <button id="next" onclick="accPopup()">Next</button>
         </div>
     </div>
+    </div>
     <div class="top-button">
-        <button id="LogIn" onclick="openPopup()"><b>Log In</b></button>
+        <button class="LogIn" id="LogIn" onclick="openPopup()"><b>Log In</b></button>
         <a href="https://w0x7y.github.io">
             <img src="home.png" loading="lazy" width="35" height="35">
         </a>
@@ -89,6 +120,7 @@
             When Idan first stepped into the gym, Ohad did not see just a boy—he saw potential. A spark waiting to
             ignite into a blaze. He took Idan under his wing, but not with kindness alone. Ohad`s lessons were ruthless,
             designed to test the limits of body and mind:
+        </p>
         <ul>
             <li><strong>The Dawn Runs:</strong> 5 a.m. sprints up endless hills, with Ohad pacing alongside, sipping
                 coffee as if gravity itself didn`t apply to him.</li>
@@ -97,73 +129,29 @@
             <li><strong>The Code of Balance:</strong> training that fused martial arts with puzzles and riddles, forcing
                 Idan to solve equations mid-workout, sharpening not only his fists but his mind.</li>
         </ul>
-        Through these trials, Idan was forged. Ohad was not merely a master of fighting—he was a craftsman of champions.
-        And in Idan, he saw his magnum opus.
+        <p>Through these trials, Idan was forged. Ohad was not merely a master of fighting—he was a craftsman of
+            champions.
+            And in Idan, he saw his magnum opus.
 
-        Even outside the gym, Ohad`s eccentric wisdom shaped Idan. He often delivered bizarre but unforgettable advice,
-        such as:
+            Even outside the gym, Ohad`s eccentric wisdom shaped Idan. He often delivered bizarre but unforgettable
+            advice,
+            such as:
+        </p>
         <ul>
             <li>“A true fighter never underestimates his opponent… or his breakfast.”</li>
             <li>“The cage is just a circle. But the circle has no corners. Think about that.”</li>
             <li>“Physics is your ally. Programming is your weapon. Fighting is the space where they meet.”</li>
         </ul>
-        It was under this mentorship that Idan Gilboa rose to dominate the Timtam Tournament, not once, not twice, but
-        three times, and to remain undefeated into 2025.
+        <p>It was under this mentorship that Idan Gilboa rose to dominate the Timtam Tournament, not once, not twice,
+            but
+            three times, and to remain undefeated into 2025.
 
-        For every cheer of the crowd, for every victory, and for every defense of the title, Ohad`s influence can be
-        felt. If Idan is the sword, then Ohad is the blacksmith who forged it.
+            For every cheer of the crowd, for every victory, and for every defense of the title, Ohad`s influence can be
+            felt. If Idan is the sword, then Ohad is the blacksmith who forged it.
         </p>
     </div>
     <div class="loader"></div>
-    <script>
-        window.addEventListener("load", () => {
-            const loader = document.querySelector(".loader");
-
-            loader.classList.add("loader-hidden");
-
-            loader.addEventListener("transitionend", () => {
-                document.body.removeChild("loader");
-            })
-        })
-        function openPopup() {
-            document.getElementById('myPopup').style.display = 'flex';
-        }
-        function closePopup() {
-            document.getElementById('myPopup').style.display = 'none';
-        }
-        function accPopup() {
-            if (document.getElementById('Name').value == '') {
-                alert('Please enter your name');
-                return;
-            }
-            else if (document.getElementById('food').value == '') {
-                alert('Please enter your fevorite food');
-                return;
-            }
-            else {
-                var name = document.getElementById('Name').value;
-
-                const logInButton = document.getElementById('LogIn');
-                const username = name; // Replace 'YourVariable' with your variable
-
-                logInButton.textContent = username;
-                document.getElementById('myPopup').style.display = 'none';
-            }
-        }
-
-        function biographyjump() {
-            document.getElementById("biography").scrollIntoView({ behavior: "smooth" });
-        }
-
-        const hamMenu = document.querySelector('.ham-menu');
-        const offScreenMenu = document.querySelector('.off-screen-menu');
-
-        hamMenu.addEventListener('click', () => {
-            hamMenu.classList.toggle('active');
-            offScreenMenu.classList.toggle('active');
-        });
-    </script>
+    <script src="script-master.js"></script>
 </body>
 
 </html>
-
