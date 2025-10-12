@@ -42,31 +42,6 @@ window.addEventListener("load", () => {
         document.body.removeChild("loader");
     })
 })
-function openPopup() {
-    document.getElementById('myPopup').style.display = 'flex';
-}
-function closePopup() {
-    document.getElementById('myPopup').style.display = 'none';
-}
-function accPopup() {
-    if (document.getElementById('Name').value == '') {
-        alert('Please enter your name');
-        return;
-    }
-    else if (document.getElementById('food').value == '') {
-        alert('Please enter your fevorite food');
-        return;
-    }
-    else {
-        var name = document.getElementById('Name').value;
-
-        const logInButton = document.getElementById('LogIn');
-        const username = name; // Replace 'YourVariable' with your variable
-
-        logInButton.textContent = username;
-        document.getElementById('myPopup').style.display = 'none';
-    }
-}
 
 function biographyjump() {
     document.getElementById("biography").scrollIntoView({ behavior: "smooth" });
